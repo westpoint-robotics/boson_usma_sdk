@@ -11,4 +11,17 @@
 
 ## A working example project that returns some camera info can be found in the TestFolder directory.
 
+# Example code in the Test folder built with this command:
+- `cc -I/usr/local/include/boson bosontest.cpp /usr/local/lib/libboson.so /usr/local/lib/libboson.so /home/user1/Projects/ConvergenceCamera/convergence_camera/BosonSDK/FSLP_Files/FSLP_64.so -o bosontest -lstdc++`
+
+# Other commands used
+- `sudo cp ~/Projects/ConvergenceCamera/convergence_camera/BosonSDK/ClientFiles_C/libboson.so /usr/local/lib/`
+- `sudo cp ~/Projects/ConvergenceCamera/convergence_camera/BosonSDK/ClientFiles_C/*.h /usr/local/include/boson/`
+
+
+# To help identify the functions in the .so file:
+- nm -A /usr/local/lib/libboson.so | grep Init
+- readelf --dyn-syms /usr/local/lib/libboson.so | grep Init
+
+
 
