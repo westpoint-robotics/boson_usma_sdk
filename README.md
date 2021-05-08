@@ -19,7 +19,8 @@
 - `cd ../TestFolder`
 - Note: it takes about 1 minute for the camera to compete its boot process after being plugged in.  
 `gcc bosontest.cpp -o bosontest -lstdc++ -lboson -lFSLP`
-
+- Run the test code to get camera info  
+`./bosontest`
  
 # OLD NOTES Below here:
 ## To make this work
