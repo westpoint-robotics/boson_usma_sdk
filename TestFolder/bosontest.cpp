@@ -3,13 +3,13 @@
 #include <stdint.h>
 #include <stdbool.h>
 extern "C" {
-#include "EnumTypes.h"
-#include "UART_Connector.h"
-#include "Client_API.h"
+#include "boson/EnumTypes.h"
+#include "boson/UART_Connector.h"
+#include "boson/Client_API.h"
 }
 
 int main() {
-    std::cout << "Hello World\n";
+    std::cout << "Test of Boson SDK install. If this works you will see the camera SN and part number\n";
     
 	// Connect to the camera. 16 is ttyACM0.
 	int32_t dev = 16;
@@ -20,6 +20,7 @@ int main() {
 	printf("Initialize: 0x%08X\n", result);
 	if (result)
 	{
+		printf("You may need to give the Camera a minute to complete initializing before running this.\n");
 		printf("Failed to initialize, exiting.\n");
 		Close();
 		return -1;
