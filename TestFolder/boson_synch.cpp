@@ -15,8 +15,7 @@ extern "C"
 int main(int argc, char* argv[]) 
 {
 	FLR_BOSON_EXT_SYNC_MODE_E sync_mode = FLR_BOSON_EXT_SYNC_DISABLE_MODE;
-
- 
+	printf("Test of Boson SDK install. If this works you will see the camera SN and part number\n");
 
 	// Connect to the camera. 16 is ttyACM0.
 	int32_t dev = 16;
@@ -103,7 +102,6 @@ printf("Setting to master");
     }
     }
 
-	printf("Test of Boson SDK install. If this works you will see the camera SN and part number\n");
 	printf("Attempting to set to mode: -%d-\n",sync_mode);
 
 
