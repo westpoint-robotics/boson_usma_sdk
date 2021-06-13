@@ -30,6 +30,7 @@ int main(int argc, char * argv[]) {
   }
 
   // Retrieve the Camera SN and print it
+  printf("CameraSN: ");
   uint32_t camera_sn;
   result = bosonGetCameraSN( & camera_sn);
   if (result) {
@@ -37,18 +38,7 @@ int main(int argc, char * argv[]) {
     Close();
     return -1;
   }
-  printf("CameraSN: %d \n", camera_sn);
-  
-  // Retrieve the Camera PN and print it
-  FLR_BOSON_PARTNUMBER_T camera_pn;
-  result = bosonGetCameraPN( & camera_pn);
-  if (result) {
-    printf("Failed with status 0x%08X, exiting.\n", result);
-    Close();
-    return -1;
-  }
-  char *answer = reinterpret_cast<char>(camera_pn);
-  printf("CameraPN: %s \n", (char*)camera_pn);
+  printf(" %d \n", camera_sn);
 
   FLR_DVO_TYPE_E dvo_src;
   result = dvoGetType( & dvo_src);
