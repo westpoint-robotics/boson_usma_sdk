@@ -47,8 +47,8 @@ int main(int argc, char * argv[]) {
     Close();
     return -1;
   }
-  char *answer = reinterpret_cast<char>(camera_pn);
-  printf("CameraPN: %s \n", (char*)camera_pn);
+//  char *answer = reinterpret_cast<char>(camera_pn);
+//  printf("CameraPN: %s \n", (char*)camera_pn);
 
   FLR_DVO_TYPE_E dvo_src;
   result = dvoGetType( & dvo_src);
