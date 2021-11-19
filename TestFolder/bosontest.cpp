@@ -17,6 +17,7 @@ int main() {
 	
 	FLR_RESULT result;
 	result = Initialize(dev, baud); //COM6, 921600 baud (port_number=5 for COM6) 
+	//result = Initialize("/dev/ttyACM0", baud); //COM6, 921600 baud (port_number=5 for COM6) 
 	printf("Initialize: 0x%08X\n", result);
 	if (result)
 	{
