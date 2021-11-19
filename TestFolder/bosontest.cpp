@@ -7,6 +7,7 @@ extern "C" {
 #include "boson/UART_Connector.h"
 #include "boson/Client_API.h"
 }
+// gcc bosontest.cpp -o bosontest -lstdc++ -lboson -lFSLP
 
 int main() {
     std::cout << "Test of Boson SDK install. If this works you will see the camera SN and part number\n";
