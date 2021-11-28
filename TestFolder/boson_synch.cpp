@@ -19,7 +19,6 @@ int main(int argc, char * argv[]) {
   int32_t dev = 47;
   int32_t baud = 921600;
 
-
   FLR_RESULT result;
   result = Initialize(dev, baud); //COM6, 921600 baud (port_number=5 for COM6)
   printf("Initialize: 0x%08X\n", result);
