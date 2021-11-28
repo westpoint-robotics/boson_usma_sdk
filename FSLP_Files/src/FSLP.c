@@ -229,11 +229,11 @@ int32_t FSLP_read_frame(int32_t port_num,uint8_t channel_ID, uint16_t start_byte
         // The whole thing has been taking too long
         if (elapsed_sec >= timeout){
             DO_DEBUG_TRACE("Frame reading has been taking too long [%f]\n", elapsed_sec);
-            DO_ERROR_TRACE("Timeout: %f s\n", elapsed_sec);
+            DO_ERROR_TRACE("Timeout1: %f s\n", elapsed_sec);
 
             if (am_in_frame == CORRECT_FRAME) {
                 int i;
-                DO_VERBOSE_TRACE("Timeout while in CORRECT_FRAME: %f s\n", elapsed_sec);
+                DO_ERROR_TRACE("Timeout while in CORRECT_FRAME: %f s\n", elapsed_sec);
 
                 DO_ERROR_TRACE("Received frame fragment - len:[%d] : ", byte_idx);
                 for (i = 0; i < byte_idx; i++){
@@ -241,7 +241,7 @@ int32_t FSLP_read_frame(int32_t port_num,uint8_t channel_ID, uint16_t start_byte
                 }
                 DO_ERROR_TRACE("\n");
             } else {
-                DO_VERBOSE_TRACE("Timeout while in %s: %f s\n", (am_in_frame) ? "OTHER_FRAME" : "UNFRAMED", elapsed_sec);
+                DO_ERROR_TRACE("Timeout while in %s: %f s\n", (am_in_frame) ? "OTHER_FRAME" : "UNFRAMED", elapsed_sec);
             }
 
             *receiveBytes =  0;
