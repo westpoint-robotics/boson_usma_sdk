@@ -24,4 +24,7 @@ gcc bosontest.cpp -o bosontest -lstdc++ -lboson -lFSLP
 cd ..
 echo ""
 echo "If this worked then you should be able to run the command 'TestFolder/bosonsynch s' to put the camera into slave mode."
+echo "If the last line of output from this command is 'Failed to initialize, exiting.' then it failed."
+echo "If the second to last line of output from this command is 'Boson Synch mode set to 2' then it succedded."
+echo "If it does not work make sure you setup the UDEV rules as per the README.md"
 
