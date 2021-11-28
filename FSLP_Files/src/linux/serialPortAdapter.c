@@ -22,12 +22,12 @@ static char port_names[KNOWN_PORTS][16] = {
     "/dev/ttyS0","/dev/ttyS1","/dev/ttyS2","/dev/ttyS3",
     "/dev/ttyS4","/dev/ttyS5","/dev/ttyS6","/dev/ttyS7",
     "/dev/ttyS8","/dev/ttyS9","/dev/ttyS10","/dev/ttyS11",
-    "/dev/ttyS12","/dev/ttyS13","/dev/ttyS14","/dev/ttyS15",
+    "/dev/ttyS12","/dev/ttyS13","/dev/ttyS14","/dev/boson_ser",
 };
 
 int32_t FSLP_lookup_port_id( char *port_name, int32_t len ){
     int32_t port_id = -1;
-    if (len > 15)
+    if (len > 16)
     {
         //no port names >16 characters
         return -1;

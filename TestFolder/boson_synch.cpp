@@ -16,8 +16,9 @@ int main(int argc, char * argv[]) {
   printf("Usage:\n\tIf argument 1 is:\n\t\tm - Synch mode is set to master\n\t\ts - Synch mode is set to slave\n\t\tAnything else and synch mode is disabled\n\n");
   printf("Test of Boson SDK install and set synch mode.\nIf this works you will see the camera SN and part number then the camera will be switched to the designated synch mode\n\n");
   // Connect to the camera. 16 is ttyACM0.
-  int32_t dev = 16;
+  int32_t dev = 47;
   int32_t baud = 921600;
+
 
   FLR_RESULT result;
   result = Initialize(dev, baud); //COM6, 921600 baud (port_number=5 for COM6)
